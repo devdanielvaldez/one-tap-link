@@ -1,12 +1,9 @@
-import { useState } from 'react';
 import { CartIcon, CalendarIcon } from './icons';
-import BookingModal from './BookingModal';
 
 const PAYPAL_URL = 'https://www.paypal.com/ncp/payment/FV5MVL5XM4AAL';
+const BOOKING_URL = 'https://onecard.contact/profile/m3pkl';
 
 export default function CTA() {
-  const [showBooking, setShowBooking] = useState(false);
-
   return (
     <section className="cta container" id="cta">
       <a
@@ -18,12 +15,15 @@ export default function CTA() {
         <CartIcon />
         Order Now
       </a>
-      <button className="btn btn-dark" onClick={() => setShowBooking(true)}>
+      <a
+        className="btn btn-dark"
+        href={BOOKING_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <CalendarIcon />
         Book a Demo
-      </button>
-
-      {showBooking && <BookingModal onClose={() => setShowBooking(false)} />}
+      </a>
     </section>
   );
 }
