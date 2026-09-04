@@ -1,0 +1,24 @@
+:root{
+  --dark:#161e2e;
+  --dark-2:#1c2436;
+  --gold:#dcb13a;
+  --gold-2:#e0b84c;
+  --cream:#fbf3e2;
+  --text-muted:#5b667a;
+  --border:#e7e5e0;
+  --max-width:1220px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+
+html,body,#root{height:100%;}
+
+body{
+  font-family:'Segoe UI',Roboto,-apple-system,BlinkMacSystemFont,Arial,sans-serif;
+  color:var(--dark);
+  background:#fff;
+  overflow-x:hidden;
+}
+
+a{text-decoration:none;color:inherit;}
+button{font-family:inherit;}
